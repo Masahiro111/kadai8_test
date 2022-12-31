@@ -16,6 +16,10 @@
                             <img class="h-12 w-12 mt-2 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}">
                         </div>
                         <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                            <div class="mb-2">
+                                <p class="text-sm text-gray-500 mb-1">@Masahiro111</p>
+                                <p class="text-xs text-gray-500">2022年 12月 31日</p>
+                            </div>
                             <h3 class="text-lg font-medium leading-6 text-gray-900" id="modal-title">Deactivate account</h3>
                             <div class="mt-2">
                                 <p class="text-sm text-gray-500">Are you sure you want to deactivate your account? All of your data will be permanently removed from our servers forever. This action cannot be undone.</p>
