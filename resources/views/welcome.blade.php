@@ -7,7 +7,6 @@
 
     <div class="pb-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-10">
-
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
                 <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left transition-all sm:my-0 sm:w-full sm:max-w-lg sm:p-6">
                     <div class="sm:flex sm:items-start">
@@ -53,7 +52,7 @@
                     </div> --}}
                 </div>
             </div>
-
         </div>
     </div>
+
 </x-app-layout>
