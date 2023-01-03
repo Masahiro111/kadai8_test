@@ -13,17 +13,25 @@
                    class="mb-2 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                    placeholder="プログラミング技術に関するタグをスペース区切りで3つまで入力"
                    name="tags">
-            <div class="flex border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm">
-                <div class="w-1/2 h-auto">
-                    <textarea
-                              name="article"
-                              id="markdown_editor_textarea"
-                              cols="30"
-                              rows="10"
-                              class="w-full"></textarea>
-                </div>
-                <div class="w-1/2 h-auto bg-white">
-                    <div id="markdown_preview"></div>
+            <div class="border-gray-300 rounded-md border shadow-sm sm:text-sm">
+                <div class="flex w-full">
+                    <div class="w-1/2">
+                        <textarea
+                                  name="article"
+                                  id="markdown_editor_textarea"
+                                  cols="30"
+                                  rows="10"
+                                  style="height: 450px"
+                                  class="w-full border-none overflow-y-scroll resize-none hover:border-none"
+                                  placeholder="エンジニアに関する知識を Markdown 記法で書いて共有しよう"></textarea>
+                    </div>
+                    <div class="w-1/2 h-auto bg-white overflow-y-scroll">
+                        <div
+                             id="markdown_preview"
+                             class="prose p-8"
+                             style="height: 450px">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="post-page-footer">
