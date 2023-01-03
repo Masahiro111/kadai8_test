@@ -31,4 +31,5 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
 
     Route::get('/drafts/new', [PostController::class, 'create'])->name('drafts.create');
     Route::post('/drafts/new', [PostController::class, 'store'])->name('drafts.store');
+    Route::get('/drafts/{id}', [PostController::class, 'show'])->name('drafts.show')->whereNumber('id');
 });
