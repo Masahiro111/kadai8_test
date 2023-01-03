@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::name('home')->group(function () {
+Route::name('home.')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('index');
 });
 
@@ -29,5 +29,6 @@ Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified']
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/drafts/new', [PostController::class, 'index'])->name('drafts.new');
+    Route::get('/drafts/new', [PostController::class, 'create'])->name('drafts.create');
+    Route::post('/drafts/new', [PostController::class, 'store'])->name('drafts.store');
 });

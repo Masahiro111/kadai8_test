@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
@@ -13,7 +15,6 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('auth.drafts.new');
     }
 
     /**
@@ -23,7 +24,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('auth.drafts.new');
     }
 
     /**
@@ -34,7 +35,28 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'tags' => 'required|string',
+            'article' => 'required|string',
+        ]);
+
+        $tags = explode(' ', $request->tags);
+        $tag1 = (isset($tags[0])) ? $tags[0] : null;
+        $tag2 = (isset($tags[1])) ? $tags[1] : null;
+        $tag3 = (isset($tags[2])) ? $tags[2] : null;
+
+        $article = Post::query()
+            ->create([
+                'user_id' => Auth::id(),
+                'title' => $request->title,
+                'tag1' => $tag1,
+                'tag2' => $tag2,
+                'tag3' => $tag3,
+                'article' => $request->article,
+            ]);
+
+        redirect()->route('home.index');
     }
 
     /**
