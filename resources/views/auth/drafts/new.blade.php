@@ -60,6 +60,9 @@
             //     breaks : true,
             //     sanitize: true,
             // });
+            var target = $('#markdown_editor_textarea')
+            var html = marked.parse(getHtml(target.html()));
+            $('#markdown_preview').html(html);
 
             $('#markdown_editor_textarea').keyup(function() {
                 var html = marked.parse(getHtml($(this).val()));
