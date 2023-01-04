@@ -46,7 +46,7 @@ class PostController extends Controller
         $tag2 = (isset($tags[1])) ? $tags[1] : null;
         $tag3 = (isset($tags[2])) ? $tags[2] : null;
 
-        $article = Post::query()
+        $post = Post::query()
             ->create([
                 'user_id' => Auth::id(),
                 'title' => $request->title,
@@ -56,7 +56,10 @@ class PostController extends Controller
                 'article' => $request->article,
             ]);
 
-        redirect()->route('home.index');
+        // dd($post);
+
+        return redirect()->route('posts.show', $post);
+        // redirect()->route('posts.show', $post->id);
     }
 
     /**
@@ -65,9 +68,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Post $post)
     {
-        //
+        return view('auth.item', compact('post'));
     }
 
     /**

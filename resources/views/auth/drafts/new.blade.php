@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="p-4">
-        <form class="post-page-wrapper" action="/drafts/new" method="post">
+        <form class="post-page-wrapper" action="{{ route('drafts.store') }}" method="post">
             @csrf
             <input
                    type="text"

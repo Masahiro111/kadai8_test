@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained();
+            $table->string('title');
             $table->string('tag1');
             $table->string('tag2')->nullable();
             $table->string('tag3')->nullable();
-            $table->string('body');
-            $table->string('title');
+            $table->string('article');
             $table->timestamps();
         });
     }
