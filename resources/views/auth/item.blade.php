@@ -24,11 +24,11 @@
     <script>
         $(window).on('load', function() {
 
-            // marked.setOptions({
-            //     langPrefix: '',
-            //     breaks : true,
-            //     sanitize: true,
-            // });
+            marked.setOptions({
+                langPrefix: '',
+                breaks : true,
+                sanitize: true,
+            });
 
             // $('#markdown_editor_textarea').keyup(function() {
             //     var html = marked.parse(getHtml($(this).val()));

@@ -55,11 +55,12 @@
     <script>
         $(window).on('load', function() {
 
-            // marked.setOptions({
-            //     langPrefix: '',
-            //     breaks : true,
-            //     sanitize: true,
-            // });
+            marked.setOptions({
+                langPrefix: '',
+                breaks : true,
+                sanitize: true,
+            });
+
             var target = $('#markdown_editor_textarea')
             var html = marked.parse(getHtml(target.html()));
             $('#markdown_preview').html(html);

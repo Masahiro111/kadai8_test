@@ -71,6 +71,7 @@
                         </svg>
                     </button>
 
+                    @auth
                     <!-- Profile dropdown -->
                     <div class="relative ml-4 flex-shrink-0" x-data="{ open: false }" @click.away="open = false" @close.stop="open = false">
                         <div @click="open = ! open">
@@ -105,6 +106,7 @@
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem" tabindex="-1" id="user-menu-item-1">Log Out</a>
                         </div>
                     </div>
+                    @endauth
 
 
                     @if (Route::has('login'))
