@@ -8,9 +8,9 @@
     <div class="py-4">
 
         @foreach ($articles as $article)
-        <a href="{{ route('posts.show', $article) }}" class="block max-w-7xl mx-auto sm:px-6 lg:px-8 mt-5">
+        <div class="block max-w-7xl mx-auto sm:px-6 lg:px-8 mt-5">
             <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
-                <div class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left transition-all sm:my-0 sm:w-full sm:max-w-lg sm:p-6">
+                <a href="{{ route('posts.show', $article) }}" class="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left transition-all sm:my-0 sm:w-full sm:max-w-lg sm:p-6">
                     <div class="sm:flex sm:items-start">
                         <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-12 sm:w-12">
                             <!-- Heroicon name: outline/exclamation-triangle -->
@@ -31,9 +31,9 @@
                         <button type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:w-auto sm:text-sm">Deactivate</button>
                         <button type="button" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm">Cancel</button>
                     </div> --}}
-                </div>
+                </a>
             </div>
-        </a>
+        </div>
         @endforeach
 
     </div>

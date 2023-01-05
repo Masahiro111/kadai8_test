@@ -25,11 +25,12 @@ Route::name('home.')->group(function () {
 
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    // Route::get('/dashboard', function () {
+    //     return view('dashboard');
+    // })->name('dashboard');
 
     Route::get('/drafts/new', [PostController::class, 'create'])->name('drafts.create');
     Route::post('/drafts/new', [PostController::class, 'store'])->name('drafts.store');
-    Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')->whereNumber('post');
 });
+
+Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')->whereNumber('post');
