@@ -45,8 +45,8 @@
                 <div class="validation">{{ $message }}</div>
                 @enderror
             </div>
-            <div class="post-page-footer">
-                <input type="submit" class="post-button m-1" value="Qiitaに投稿">
+            <div class="mt-4 text-right sm:col-span-2">
+                <button type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-bold text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">&nbsp;Giita に投稿&nbsp;</button>
             </div>
         </form>
     </div>
