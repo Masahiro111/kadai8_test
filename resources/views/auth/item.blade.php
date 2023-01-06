@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="item-page-wrapper">
+    {{-- <div class="item-page-wrapper">
         <div class="item-wrapper prose">
             <div class="item-header">
                 <div class="date">{{$post->created_at}}</div>
@@ -16,6 +16,30 @@
                 @endif
             </div>
             <div class="item-body">{{$post->article}}</div>
+        </div>
+    </div> --}}
+
+    <div class="relative overflow-hidden bg-white py-16">
+        <div class="relative px-6 lg:px-8">
+            <div class="mx-auto max-w-prose text-lg">
+                <h1>
+                    <span class="block text-sm font-semibold text-indigo-600">&#64;{{$post->user->name}}</span>
+                    <span class="block text-sm font-semibold text-indigo-600">投稿日：{{$post->created_at->format('Y 年m月d日')}}</span>
+                    <span class="mt-2 mb-2 block font-bold leading-8 tracking-tight text-gray-900 sm:text-2xl">{{$post->title}}</span>
+                    <small class="block mb-12">
+                        <span class="item-tag">タグ： {{$post->tag1}}</span>
+                        @if ($post->tag2)
+                        <span class="item-tag">, {{$post->tag2}}</span>
+                        @endif
+                        @if ($post->tag3)
+                        <span class="item-tag">, {{$post->tag3}}</span>
+                        @endif
+                    </small>
+                </h1>
+            </div>
+            <div class="prose prose-lg prose-indigo mx-auto mt-6 text-gray-500">
+                <div class="item-body">{{$post->article}}</div>
+            </div>
         </div>
     </div>
 
